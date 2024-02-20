@@ -4,7 +4,7 @@ Inspired by the terminal interface, this portfolio website incorporates many of 
 
 ## Screenshot
 
-<img align="left" src=".github/assets/term.png" width="55%" height="55%" /></br></br></br></br></br></br></br>
+<img align="left" src=".github/assets/term.png" width="55%" height="55%" /></br></br></br></br></br></br></br></br>
 
 ## Credit
 
