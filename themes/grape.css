@@ -1,0 +1,13 @@
+.terminal {
+    --color: #FFF;
+    --background: #2C003E;
+    --error-color: #FF4081;
+    --link-color: #FF8F00;
+    --line-thickness: 3;
+    --font: Source Code Pro;
+    --size: 1.4;
+}
+
+.cmd-cursor {
+    --original-color: #FF8F00;
+}

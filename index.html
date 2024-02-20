@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.terminal/js/jquery.terminal.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery.terminal/css/jquery.terminal.min.css"/>
+    <link rel="stylesheet" href="/terminal/themes/default.css">
+</head>
+<template id="greetings">
+    ________        ___  ________     ___    ___ ________  ________      
+    |\   __  \      |\  \|\   __  \   |\  \  /  /|\   __  \|\   __  \     
+    \ \  \|\ /_     \ \  \ \  \|\  \  \ \  \/  / | \  \|\  \ \  \|\  \    
+     \ \   __  \  __ \ \  \ \   __  \  \ \    / / \ \  \\\  \ \  \\\  \   
+      \ \  \|\  \|\  \\_\  \ \  \ \  \  /     \/   \ \  \\\  \ \  \\\  \  
+       \ \_______\ \________\ \__\ \__\/  /\   \    \ \_____  \ \_____  \ 
+        \|_______|\|________|\|__|\|__/__/ /\ __\    \|___| \__\|___| \__\
+                                      |__|/ \|__|          \|__|     \|__|    
+</template>
+<body>
+    <script>
+        $(document).ready(function() {
+            var availableThemes = ['default', 'darkmode', 'eightkeight', 'bento', 'camping', 'grape', 'lil-dragon', 'mizu', 'nautilus', 'nord', 'olivia', 'sweden'];
+
+            var commands = {
+                help: function() {
+                    this.echo();
+                    this.echo('Available commands:');
+                    this.echo(' - help: Display available commands.');
+                    this.echo(' - bio: A brief description of the creator of this website.');
+                    this.echo(' - socials: My social media/network pages.');
+                    this.echo(' - email: My email for business purposes.');
+                    this.echo(" - projects: Every project I've worked on.");
+                    this.echo(' - music: Some playlists I listen to frequently');
+                    this.echo(' - theme [theme-name]: Change the terminal theme.');
+                    this.echo(' - themelist: List all of the available themes.');
+                    this.echo(' - time: Displays the current time.');
+                    this.echo(' - display: Shows the ASCII art again.')
+                    this.echo(' - clear: Clears the terminal.');
+                    this.echo();
+                },
+                bio: function() {
+                    this.echo();
+                    this.echo(" - Hi, I'm Brooks!");
+                    this.echo(" - From a young age, I have had a strong connection and fascination with computers. I vividly remember");
+                    this.echo(" - getting Minecraft in 2012 and delving deep into the files to explore the source code to one of");
+                    this.echo(" - Java's most famous projects. This paired with helping others fix issues with their phones and PCS");
+                    this.echo(" - sparked a lifetime love for software engineering and the world of computer science. Now in my sophomore");
+                    this.echo(" - year at Quinnipiac University as a computer science, game design, and cybersecurity student, I have");
+                    this.echo(" - gotten experience with a variety of coding languages such as Java, C#, and Kotlin and tools like Git and");
+                    this.echo(" - Android Studio. With these tools under my belt, I have been able to create fun and engaging projects");
+                    this.echo(" - including a video game based around my own college campus.");
+                    this.echo();
+                },
+                socials: function() {
+                    var linkedin = 'https://www.linkedin.com/in/brooks-jackson';
+                    var github = 'https://github.com/bjaxqq';
+                    var discord = 'https://discord.com/users/1194707393662169176';
+                    var osu = 'https://osu.ppy.sh/users/31124207';
+                    
+                    this.echo();
+                    this.echo(' - linkedin       [[!;;;;' + linkedin + ']linkedin/brooks-jackson]');
+                    this.echo(' - github         [[!;;;;' + github + ']github/bjaxqq]');
+                    this.echo(' - discord        [[!;;;;' + discord + ']discord/bjaxqqq]');
+                    this.echo(' - osu!           [[!;;;;' + osu + ']osu/bjaxqq]');
+                    this.echo();
+                },
+                themelist: function() {
+                    this.echo();
+                    this.echo('Available themes:');
+                    this.echo(' - default');
+                    this.echo(' - darkmode');
+                    this.echo(' - eightkeight (8008)');
+                    this.echo(' - bento');
+                    this.echo(' - camping');
+                    this.echo(' - grape');
+                    this.echo(' - lil-dragon');
+                    this.echo(' - mizu');
+                    this.echo(' - nautilus');
+                    this.echo(' - nord');
+                    this.echo(' - olivia');
+                    this.echo(' - sweden');
+                    this.echo();
+                },
+                music: function() {
+                    var seventies = 'https://open.spotify.com/playlist/2bqNeOsa97LQjlyD94KSxm?si=e5218184994248c6';
+                    var hyperpop = 'https://open.spotify.com/playlist/3NMa8sQZZlQeyCvteMdNZG?si=4409cc616e8446b6';
+                    var hiphop = 'https://open.spotify.com/playlist/6BHofbGVxXXz4SH1iZo32y?si=c52775eb3a44474f';
+                    var lofi = 'https://open.spotify.com/playlist/5jpcLh3dYNt6dseHmw0V1n?si=74fdaf2cecc54f8f';
+                    var jazz = 'https://open.spotify.com/playlist/30flKP22mGjiTp2Ns0lI3O?si=36dd3cdba355451d';
+                    var piano = 'https://open.spotify.com/playlist/3i8YMysvq6JtHIl7045nYV?si=67f62304da7b4c7e';
+                    var acoustic = 'https://open.spotify.com/playlist/71vBfYH5oBvZC9FPVWkJE9?si=d7ec305292ef4706';
+                    var jindie = 'https://open.spotify.com/playlist/6beO4guFwvdPUlTe1i6eYn?si=8331b1401ec14478';
+                    var chindie = 'https://open.spotify.com/playlist/3RLbdgiYnVGLz0eD52syJv?si=84870160571248a5';
+                    var jrock = 'https://open.spotify.com/playlist/1MsBQATRRtivi3yPctgpYZ?si=5b4f8db047c14546';
+                    var jpop = 'https://open.spotify.com/playlist/3o7VXDYRk7mv72VT4J6ACY?si=8987e33a878a4b5f';
+                    var vocaloid = 'https://open.spotify.com/playlist/5lPwbiEnAXpucWTPVknBk8?si=7b0058a7a68245d9';
+                    var indiealt = 'https://open.spotify.com/playlist/7eWpowQ96M0zgwIWSeCmjc?si=d5f52b0681f14fa2';
+                    var indiefolk = 'https://open.spotify.com/playlist/1y85W1Pe2tBM8SiFrHpgKE?si=7454681522504f8f';
+                    var indierock = 'https://open.spotify.com/playlist/5vrBmlRPc4ObtDPf5synEI?si=222350ca94db4453';
+                    
+                    this.echo();
+                    this.echo(' - 70s                       [[!;;;;' + seventies + ']spotify/70s]');
+                    this.echo(' - Hyperpop                  [[!;;;;' + hyperpop + ']spotify/hyperpop]');
+                    this.echo(' - Hip-Hop                   [[!;;;;' + hiphop + ']spotify/hip-hop]');
+                    this.echo(' - Lofi                      [[!;;;;' + lofi + ']spotify/lofi]');
+                    this.echo(' - Jazz                      [[!;;;;' + jazz + ']spotify/jazz]');
+                    this.echo(' - Piano                     [[!;;;;' + piano + ']spotify/piano]');
+                    this.echo(' - Acoustic Guitar           [[!;;;;' + acoustic + ']spotify/acoustic]');
+                    this.echo(' - Japanese Indie Folk       [[!;;;;' + jindie + ']spotify/jindie]');
+                    this.echo(' - Chinese Indie             [[!;;;;' + chindie + ']spotify/chindie]');
+                    this.echo(' - Japanese Rock             [[!;;;;' + jrock + ']spotify/jrock]');
+                    this.echo(' - Japanese Pop              [[!;;;;' + jpop + ']spotify/jpop]');
+                    this.echo(' - Vocaloid                  [[!;;;;' + vocaloid + ']spotify/vocaloid]');
+                    this.echo(' - Indie/Alt                 [[!;;;;' + indiealt + ']spotify/indiealt]');
+                    this.echo(' - Indie Folk                [[!;;;;' + indiefolk + ']spotify/indiefolk]');
+                    this.echo(' - Indie Rock                [[!;;;;' + indierock + ']spotify/indierock]');
+                    this.echo();
+                },
+                projects: function() {
+                    var tetris = 'https://github.com/bjaxqq/tetris';
+                    var timer = 'https://github.com/jubck/jubck.github.io';
+                    var rpg = 'https://a-r-t.github.io/SER225-Project-Website/semesters/fall2023/teams/art';
+                    var website = 'https://github.com/bjaxqq/bjaxqq.github.io';
+                    var infinite = 'https://github.com/bjaxqq/infinitesearch';
+                    
+                    this.echo();
+                    this.echo(' - Tetris                           [[!;;;;' + tetris + ']bjaxqq/tetris]');
+                    this.echo(' - Hackathon Timer Website          [[!;;;;' + timer + ']jubck/jubck.github.io]');
+                    this.echo(' - Quinnipiac: A Campus Quest       [[!;;;;' + rpg + ']fall2023/teams/art]');
+                    this.echo(' - InfiniteSearch                   [[!;;;;' + website + ']bjaxqq/bjaxqq.github.io]');
+                    this.echo(' - This Website                     [[!;;;;' + website + ']bjaxqq/infinitesearch]');
+                    this.echo();
+                },
+                time: function() {
+                    var now = new Date();
+                    var timeString = now.toLocaleTimeString();
+                    this.echo();
+                    this.echo(' - Current time: ' + timeString);
+                    this.echo();
+                },
+                theme: function(themeName) {
+                    if (availableThemes.includes(themeName)) {
+                        $('link[rel=stylesheet][href*="themes/"]').remove();
+                        $('head').append('<link rel="stylesheet" href="/themes/' + themeName + '.css">');
+                        this.echo();
+                        this.echo(' - Theme changed to ' + themeName);
+                        this.echo();
+                    } else {
+                      this.error(' - Theme not found. Type "themelist" to see all available themes.');
+                    }
+                },
+                display: function() {
+                    this.echo(greetings.innerHTML);
+                },
+                email: function() {
+                    var email = 'brksjcksn03@protonmail.com';
+                    this.echo();
+                    this.echo(' - Email:       [[!;;;;mailto:' + email + ']brksjcksn03@protonmail.com]');
+                    this.echo();
+                },                
+            };
+        
+            $('body').terminal(commands, {
+                greetings: greetings.innerHTML,
+                onInit: function(terminal) {
+                    terminal.echo('Welcome to my interactive terminal.');
+                    terminal.echo("For a list of all available commands, type 'help'.");
+                },
+                prompt: 'guest@bjaxqq.github.io ~ % ',
+            });
+        });
+    </script>
+</body>
+</html>
