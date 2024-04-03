@@ -139,7 +139,7 @@
                 theme: function(themeName) {
                     if (availableThemes.includes(themeName)) {
                         $('link[rel=stylesheet][href*="themes/"]').remove();
-                        $('head').append('<link rel="stylesheet" href="/themes/' + themeName + '.css">');
+                        $('head').append('<link rel="stylesheet" href="themes/' + themeName + '.css">');
                         this.echo();
                         this.echo(' - Theme changed to ' + themeName);
                         this.echo();
