@@ -141,11 +141,38 @@
                     if (availableThemes.includes(themeName)) {
                         $('link[rel=stylesheet][href*="themes/"]').remove();
                         $('head').append('<link rel="stylesheet" href="themes/' + themeName + '.css">');
+                
+                        var greetingsElement = document.getElementById("greetings");
+                
+                        if (themeName === "default" || themeName === "darkmode") {
+                            greetingsElement.style.color = "blue";
+                        } else if (themeName === "eightkeight" || themeName === "bento") {
+                            greetingsElement.style.color = "#F44C7F";
+                        } else if (themeName === "camping") {
+                            greetingsElement.style.color = "#618C56";
+                        } else if (themeName === "grape") {
+                            greetingsElement.style.color = "#FF8F00";
+                        } else if (themeName === "lil-dragon") {
+                            greetingsElement.style.color = "#8A5BD6";
+                        } else if (themeName === "mizu") {
+                            greetingsElement.style.color = "#FCFBF6";
+                        } else if (themeName === "nautilus") {
+                            greetingsElement.style.color = "#EBB723";
+                        } else if (themeName === "nord") {
+                            greetingsElement.style.color = "#88C0D0";
+                        } else if (themeName === "olivia") {
+                            greetingsElement.style.color = "#DEAF9D";
+                        } else if (themeName === "sweden") {
+                            greetingsElement.style.color = "#FFCC02";
+                        } else if (themeName === "catppuccin") {
+                            greetingsElement.style.color = "#87B2F7";
+                        }
+                        
                         this.echo();
                         this.echo(' - Theme changed to ' + themeName);
                         this.echo();
                     } else {
-                      this.error(' - Theme not found. Type "themelist" to see all available themes.');
+                        this.error(' - Theme not found. Type "themelist" to see all available themes.');
                     }
                 },
                 display: function() {
