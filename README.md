@@ -1,4 +1,4 @@
-# [Terminal](https://bjaxqq.github.io/terminal)
+# [terminal](https://bjaxqq.github.io/terminal)
 
 Inspired by the terminal interface, this portfolio website incorporates many of the terminal's features and uses commands to navigate through the information and content.
 
