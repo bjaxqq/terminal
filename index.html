@@ -144,30 +144,47 @@
                 
                         var greetingsElement = document.getElementById("greetings");
                 
-                        if (themeName === "default" || themeName === "darkmode") {
-                            greetingsElement.style.color = "blue";
-                        } else if (themeName === "eightkeight" || themeName === "bento") {
-                            greetingsElement.style.color = "#F44C7F";
-                        } else if (themeName === "camping") {
-                            greetingsElement.style.color = "#618C56";
-                        } else if (themeName === "grape") {
-                            greetingsElement.style.color = "#FF8F00";
-                        } else if (themeName === "lil-dragon") {
-                            greetingsElement.style.color = "#8A5BD6";
-                        } else if (themeName === "mizu") {
-                            greetingsElement.style.color = "#FCFBF6";
-                        } else if (themeName === "nautilus") {
-                            greetingsElement.style.color = "#EBB723";
-                        } else if (themeName === "nord") {
-                            greetingsElement.style.color = "#88C0D0";
-                        } else if (themeName === "olivia") {
-                            greetingsElement.style.color = "#DEAF9D";
-                        } else if (themeName === "sweden") {
-                            greetingsElement.style.color = "#FFCC02";
-                        } else if (themeName === "catppuccin") {
-                            greetingsElement.style.color = "#87B2F7";
+                        switch (themeName) {
+                            case "default":
+                            case "darkmode":
+                                greetingsElement.style.color = "blue";
+                                break;
+                            case "eightkeight":
+                            case "bento":
+                                greetingsElement.style.color = "#F44C7F";
+                                break;
+                            case "camping":
+                                greetingsElement.style.color = "#618C56";
+                                break;
+                            case "grape":
+                                greetingsElement.style.color = "#FF8F00";
+                                break;
+                            case "lil-dragon":
+                                greetingsElement.style.color = "#8A5BD6";
+                                break;
+                            case "mizu":
+                                greetingsElement.style.color = "#FCFBF6";
+                                break;
+                            case "nautilus":
+                                greetingsElement.style.color = "#EBB723";
+                                break;
+                            case "nord":
+                                greetingsElement.style.color = "#88C0D0";
+                                break;
+                            case "olivia":
+                                greetingsElement.style.color = "#DEAF9D";
+                                break;
+                            case "sweden":
+                                greetingsElement.style.color = "#FFCC02";
+                                break;
+                            case "catppuccin":
+                                greetingsElement.style.color = "#87B2F7";
+                                break;
+                            default:
+                                greetingsElement.style.color = "black"; // Set a default color if the theme is not recognized
+                                break;
                         }
-                        
+                
                         this.echo();
                         this.echo(' - Theme changed to ' + themeName);
                         this.echo();
