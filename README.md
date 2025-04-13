@@ -1,19 +1,45 @@
 # [terminal](https://bjaxqq.github.io/terminal)
 
-Inspired by the terminal interface, this portfolio website incorporates many of the terminal's features and uses commands to navigate through the information and content.
+A complete custom terminal interface that serves as my interactive portfolio, now rebuilt from the ground up for Version 2.0.
 
-## Screenshot
+## Screenshots
 
-<img align="left" src=".github/assets/term.png" width="55%" height="55%" /></br></br></br></br></br></br></br></br>
+### Version 1.0 (Original)
+<img align="left" src=".github/assets/term.png" width="45%" height="45%" />
+
+### Version 2.0 (Current)
+<img align="right" src=".github/assets/term2.png" width="45%" height="45%" />
+
+<br clear="both"/>
+
+## Features
+
+### Interactive Terminal
+- **Custom-built terminal emulator** (no longer using jQuery Terminal)
+- **Command history** with up/down arrow navigation
+- **Rich text formatting** with Catppuccin theme colors
+- **Comprehensive command set**:
+  - `help` - Show all available commands
+  - `ascii` - Display rainbow-colored ASCII art
+  - `projects` - View my development projects
+  - `skills` - My technical capabilities
+  - `socials` - Social media links
+  - `classes` - University courses taken
+  - And many more...
+
+### Desktop Environment
+- **Dual-pane interface** with PDF viewer and terminal
+- **macOS-inspired UI** with window controls and status bar
+- **Responsive design** that works on all devices
+
+## Technology Stack
+- **Pure JavaScript** implementation (no jQuery)
+- **CSS Grid/Flexbox** for layout
+- **Catppuccin color scheme** for terminal styling
+- **System fonts** for native feel
 
 ## Credit
-
-While I did make most of this website by myself, I can't take full credit for all of the code.
-
-### Base Code
-
-The functionality for this website (the actual terminal interface) is called [JQuery Terminal](https://github.com/jcubic/jquery.terminal) and was created by jcubic. This is a fancastic plugin for JavaScript that creates a working terminal and I highly suggest you check it out as there is so much you can do that I did not explore.
-
-### Themes
-
-The themes that I used for the terminal are handpicked from some widely popular and well-known CSS themes. My personal favorite, [Nord](https://www.nordtheme.com/), is what I use for most of my applications. While these are publicly available themes that many companies and websites use, I decided to go to [Monkeytype](https://monkeytype.com/)'s database to get their CSS files so I have to give credit there too.
+While Version 1.0 used jQuery Terminal, Version 2.0 is completely custom-built with:
+- Original design and implementation by Brooks Jackson
+- Inspiration from macOS and Linux terminal interfaces
+- Catppuccin color palette ([https://github.com/catppuccin](https://github.com/catppuccin))
