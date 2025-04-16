@@ -132,7 +132,7 @@ Last played: Unknown track`;
     }
   },
 
-  projects: () => `Collaborative Coding Website - <a href="https://github.com/bjaxqq/SER375/tree/main/codealong" target="_blank">[bjaxqq/codealong]</a>
+  projects: () => `resonance - <a href="https://github.com/bjaxqq/resonance" target="_blank">[bjaxqq/resonance]</a>
 Quinnipiac Tracker - <a href="https://github.com/bajackson1/Quinnipiac tracker" target="_blank">[bajackson1/QuinnipiacTracker]</a>
 Quinnipiac: A Campus Quest - <a href="https://a-r-t.github.io/SER225-Project-Website/semesters/fall2023/teams/art" target="_blank">[fall2023/teams/art]</a>
 Stoic Quote Generator Website - <a href="https://github.com/bjaxqq/quotes" target="_blank">[bjaxqq/quotes]</a>
@@ -140,11 +140,13 @@ TCP/UDP Trivia Game - <a href="https://github.com/bajackson1/trivia-game" target
 This Website - <a href="https://github.com/bjaxqq/terminal" target="_blank">[bjaxqq/terminal]</a>
 Weaver's Wrath - <a href="https://a-r-t.github.io/SER225-Project-Website/semesters/fall2024/teams/arachnerds-inc" target="_blank">[fall2024/teams/arachnerds]</a>`,
 
-  skills: () => `<span class="ansi-cyan">Developer Tools:</span> Android Studio, Eclipse, Git, GitHub, IntelliJ, Neovim, Visual Studio, VSCode
-<span class="ansi-cyan">Frameworks:</span> Node.js, React.js
+skills: () => `<span class="ansi-cyan">Developer Tools:</span> Android Studio, Eclipse, Git, GitHub, IntelliJ, Neovim, Visual Studio, VSCode
+<span class="ansi-cyan">Frameworks:</span> Node.js, React.js, React Native
 <span class="ansi-cyan">Languages:</span> C#, CSS, HTML, Java, JavaScript, Kotlin, LaTeX, Markdown, Python
 <span class="ansi-cyan">Libraries:</span> BeautifulSoup, Matplotlib, NumPy, Pandas, Requests, Selenium, TensorFlow
-<span class="ansi-cyan">Systems:</span> Linux, MacOS, Windows 10, Windows 11`,
+<span class="ansi-cyan">Systems:</span> Linux, MacOS, Windows 10, Windows 11
+<span class="ansi-cyan">Networking:</span> TCP/UDP protocols, IP addressing, DNS, network troubleshooting
+`,
 
   socials: () => `Discord - <a href="https://discord.com/users/bjaxqqq" target="_blank">discord/bjaxqqq</a>
 GitHub - <a href="https://github.com/bjaxqq" target="_blank">github/bjaxqq</a>
